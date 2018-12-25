@@ -7,16 +7,21 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 import org.junit.Test;
 
 public class FizzBuzzTest {
+	
+	static Logger logger = Logger.getLogger(FizzBuzzTest.class.getName());
+
 
 	@Test
 	/**
 	 * Get results from resource folders, and FizzBuzz to do simple comparison
 	 */
 	public void testPositive() {
+		logger.info("Testing normal positive result.");
 		List<String>result1 = FizzBuzz.say(33, 100, 3);
 		List<String>result2 = getFromSampleFile("correctResult");		
 		assertTrue(compare(result1, result2));
@@ -24,6 +29,7 @@ public class FizzBuzzTest {
 	
 	@Test
 	public void testWronglyCount() {
+		logger.info("Test if wrongly count.");
 		List<String>result1 = FizzBuzz.say(33, 100, 3);
 		List<String>result2 = getFromSampleFile("wrongResult-7thLine");		
 		assertFalse(compare(result1, result2));
@@ -31,6 +37,7 @@ public class FizzBuzzTest {
 	
 	@Test
 	public void testWronglyFizz() {
+		logger.info("Test if wrongly say Fizz.");
 		List<String>result1 = FizzBuzz.say(33, 100, 3);
 		List<String>result2 = getFromSampleFile("wrongResult-7thLine");		
 		assertFalse(compare(result1, result2));
@@ -38,6 +45,7 @@ public class FizzBuzzTest {
 	
 	@Test
 	public void testWronglyBuzz() {
+		logger.info("Test if wrongly say Buzz.");
 		List<String>result1 = FizzBuzz.say(33, 100, 3);
 		List<String>result2 = getFromSampleFile("wrongResult-6thLine");		
 		assertFalse(compare(result1, result2));
@@ -45,6 +53,7 @@ public class FizzBuzzTest {
 	
 	@Test
 	public void testWronglyFizzBuzz() {
+		logger.info("Test if wrongly say FizzBuzz.");
 		List<String>result1 = FizzBuzz.say(33, 100, 3);
 		List<String>result2 = getFromSampleFile("wrongResult-30thLine");		
 		assertFalse(compare(result1, result2));
@@ -52,6 +61,7 @@ public class FizzBuzzTest {
 	
 	@Test
 	public void testWronglyLackRounds() {
+		logger.info("Test if wrongly lack rounds.");
 		List<String>result1 = FizzBuzz.say(33, 100, 3);
 		List<String>result2 = getFromSampleFile("wrongResult-lackRounds");		
 		assertFalse(compare(result1, result2));
@@ -111,10 +121,9 @@ public class FizzBuzzTest {
 		}
 		
 		catch(Exception e)
-		{
+		{		
 			return false;
 		}
-		
 		
 		return result;
 	}
