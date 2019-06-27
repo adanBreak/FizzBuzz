@@ -1,4 +1,4 @@
-package com.pactera.service;
+package com.gordon.service;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -10,6 +10,8 @@ import java.util.Scanner;
 import java.util.logging.Logger;
 
 import org.junit.Test;
+
+import com.gordon.service.FizzBuzz;
 
 public class FizzBuzzTest {
 	

@@ -1,8 +1,8 @@
-package com.pactera.app;
+package com.gordon.app;
 
 import java.util.List;
 
-import com.pactera.service.FizzBuzz;
+import com.gordon.service.FizzBuzz;
 
 /**
  * 
