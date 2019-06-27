@@ -5,4 +5,4 @@ Fizz buzz is a group word game for children to teach them about division. Player
 # How to test & run
 
 To test, use mvn test goal to test.
-To run, use mvn exec:java -D"exec.mainClass"="com.pactera.app.Main" to run the program.
+To run, use mvn exec:java -D"exec.mainClass"="com.gordon.app.Main" to run the program.

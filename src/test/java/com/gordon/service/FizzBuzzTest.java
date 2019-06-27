@@ -25,7 +25,7 @@ public class FizzBuzzTest {
 	public void testPositive() {
 		logger.info("Testing normal positive result.");
 		List<String>result1 = FizzBuzz.say(33, 100, 3);
-		List<String>result2 = getFromSampleFile("correctResult");		
+		List<String>result2 = getFromSampleFile("CorrectResult");		
 		assertTrue(compare(result1, result2));
 	}
 	
@@ -33,7 +33,7 @@ public class FizzBuzzTest {
 	public void testWronglyCount() {
 		logger.info("Test if wrongly count.");
 		List<String>result1 = FizzBuzz.say(33, 100, 3);
-		List<String>result2 = getFromSampleFile("wrongResult-7thLine");		
+		List<String>result2 = getFromSampleFile("WrongResult-7thLine");		
 		assertFalse(compare(result1, result2));
 	}
 	
@@ -41,7 +41,7 @@ public class FizzBuzzTest {
 	public void testWronglyFizz() {
 		logger.info("Test if wrongly say Fizz.");
 		List<String>result1 = FizzBuzz.say(33, 100, 3);
-		List<String>result2 = getFromSampleFile("wrongResult-7thLine");		
+		List<String>result2 = getFromSampleFile("WrongResult-7thLine");		
 		assertFalse(compare(result1, result2));
 	}
 	
@@ -49,7 +49,7 @@ public class FizzBuzzTest {
 	public void testWronglyBuzz() {
 		logger.info("Test if wrongly say Buzz.");
 		List<String>result1 = FizzBuzz.say(33, 100, 3);
-		List<String>result2 = getFromSampleFile("wrongResult-6thLine");		
+		List<String>result2 = getFromSampleFile("WrongResult-6thLine");		
 		assertFalse(compare(result1, result2));
 	}
 	
@@ -57,7 +57,7 @@ public class FizzBuzzTest {
 	public void testWronglyFizzBuzz() {
 		logger.info("Test if wrongly say FizzBuzz.");
 		List<String>result1 = FizzBuzz.say(33, 100, 3);
-		List<String>result2 = getFromSampleFile("wrongResult-30thLine");		
+		List<String>result2 = getFromSampleFile("WrongResult-30thLine");		
 		assertFalse(compare(result1, result2));
 	}
 	
@@ -65,7 +65,7 @@ public class FizzBuzzTest {
 	public void testWronglyLackRounds() {
 		logger.info("Test if wrongly lack rounds.");
 		List<String>result1 = FizzBuzz.say(33, 100, 3);
-		List<String>result2 = getFromSampleFile("wrongResult-lackRounds");		
+		List<String>result2 = getFromSampleFile("WrongResult-lackRounds");		
 		assertFalse(compare(result1, result2));
 	}
 	
