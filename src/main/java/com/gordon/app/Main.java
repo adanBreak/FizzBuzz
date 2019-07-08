@@ -13,10 +13,8 @@ public class Main
 {
 	public static void main(String[]args)
 	{
-		int countOfPuples = 33;
-		int numbers = 100;
-		int rounds = 3;
-		List<String>results = FizzBuzz.say(countOfPuples, numbers, rounds);
+		int number = 100;
+		List<String>results = FizzBuzz.say(number);
 		FizzBuzz.print(results);
 	}
 }

@@ -10,32 +10,20 @@ import java.util.List;
  */
 public class FizzBuzz 
 {
-	public static List<String> say(int countOfPuples, int numbers, int rounds)
+	public static List<String> say(int number)
 	{
 		List<String> results = new ArrayList<String>();
-		int cur = 0;
-		int current_round = 1;
 		
-		loop:
-		while(current_round <= rounds)
+		
+		
+		for(int cur = 1; cur <=100; cur++)
 		{
-			
 			StringBuffer wordSb = new StringBuffer();
-			cur ++;
-			if(cur > numbers)
-			{
-				current_round ++;
-				
-				if(current_round > rounds)
-				{
-					break loop;
-				}
-				cur = 1;
-			}
 			if(cur % 3 == 0)
 			{
 				wordSb.append("Fizz");
 			}
+			
 			if(cur % 5 == 0)
 			{
 				wordSb.append("Buzz");
@@ -47,16 +35,14 @@ public class FizzBuzz
 			if(!wordSb.toString().equals(""))
 			{
 				results.add(wordSb.toString());
-			}
-			
-			
+			}	
 		}
-		
 			
 		
 		
 		return results;
 	}
+	
 	
 	public static void print(List<String>results)
 	{

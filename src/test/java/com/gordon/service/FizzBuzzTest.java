@@ -22,52 +22,14 @@ public class FizzBuzzTest {
 	/**
 	 * Get results from resource folders, and FizzBuzz to do simple comparison
 	 */
-	public void testPositive() {
+	public void test() {
 		logger.info("Testing normal positive result.");
-		List<String>result1 = FizzBuzz.say(33, 100, 3);
+		List<String>result1 = FizzBuzz.say(100);
 		List<String>result2 = getFromSampleFile("CorrectResult");		
 		assertTrue(compare(result1, result2));
 	}
 	
-	@Test
-	public void testWronglyCount() {
-		logger.info("Test if wrongly count.");
-		List<String>result1 = FizzBuzz.say(33, 100, 3);
-		List<String>result2 = getFromSampleFile("WrongResult-7thLine");		
-		assertFalse(compare(result1, result2));
-	}
 	
-	@Test
-	public void testWronglyFizz() {
-		logger.info("Test if wrongly say Fizz.");
-		List<String>result1 = FizzBuzz.say(33, 100, 3);
-		List<String>result2 = getFromSampleFile("WrongResult-7thLine");		
-		assertFalse(compare(result1, result2));
-	}
-	
-	@Test
-	public void testWronglyBuzz() {
-		logger.info("Test if wrongly say Buzz.");
-		List<String>result1 = FizzBuzz.say(33, 100, 3);
-		List<String>result2 = getFromSampleFile("WrongResult-6thLine");		
-		assertFalse(compare(result1, result2));
-	}
-	
-	@Test
-	public void testWronglyFizzBuzz() {
-		logger.info("Test if wrongly say FizzBuzz.");
-		List<String>result1 = FizzBuzz.say(33, 100, 3);
-		List<String>result2 = getFromSampleFile("WrongResult-30thLine");		
-		assertFalse(compare(result1, result2));
-	}
-	
-	@Test
-	public void testWronglyLackRounds() {
-		logger.info("Test if wrongly lack rounds.");
-		List<String>result1 = FizzBuzz.say(33, 100, 3);
-		List<String>result2 = getFromSampleFile("WrongResult-lackRounds");		
-		assertFalse(compare(result1, result2));
-	}
 	
 	
 	
