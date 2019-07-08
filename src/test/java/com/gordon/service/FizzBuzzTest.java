@@ -24,7 +24,7 @@ public class FizzBuzzTest {
 	 */
 	public void test() {
 		logger.info("Testing normal positive result.");
-		List<String>result1 = FizzBuzz.say(100);
+		List<String>result1 = FizzBuzz.getInstance(100).say();
 		List<String>result2 = getFromSampleFile("CorrectResult");		
 		assertTrue(compare(result1, result2));
 	}

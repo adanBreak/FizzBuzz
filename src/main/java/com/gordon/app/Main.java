@@ -14,7 +14,7 @@ public class Main
 	public static void main(String[]args)
 	{
 		int number = 100;
-		List<String>results = FizzBuzz.say(number);
+		List<String>results = FizzBuzz.getInstance(number).say();
 		FizzBuzz.print(results);
 	}
 }

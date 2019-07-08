@@ -10,13 +10,38 @@ import java.util.List;
  */
 public class FizzBuzz 
 {
-	public static List<String> say(int number)
+	
+	private static FizzBuzz instance;
+	private int number;
+	
+	private FizzBuzz(int number)
+	{
+		this.number = number;
+	}
+	
+	
+	/**
+	 * Construct singleton instance to make sure it's only referenced once.
+	 * @param number how many number you wish to run
+	 * @return saying list
+	 */
+	public static FizzBuzz getInstance(int number)
+	{
+		if(instance == null)
+		{
+			return new FizzBuzz(number);
+		}
+		
+		else return instance;
+	}
+	
+	public List<String> say()
 	{
 		List<String> results = new ArrayList<String>();
 		
 		
 		
-		for(int cur = 1; cur <=100; cur++)
+		for(int cur = 1; cur <= this.number; cur++)
 		{
 			StringBuffer wordSb = new StringBuffer();
 			if(cur % 3 == 0)
